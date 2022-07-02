@@ -1,0 +1,59 @@
+:root {
+  --container-padding: calc(50% - 590px);
+  --container-padding-lg: 60px;
+  --container-padding-md: 24px;
+  --container-padding-sm: 16px;
+
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-downy: #63D2C1;
+  --color-outrageous-orange: #F9572E;
+  --color-outrageous-orange-2: #FF7B59;
+}
+
+@custom-media --xl-viewport (max-width: 1439px);
+@custom-media --lg-viewport (max-width: 1023px);
+@custom-media --md-viewport (max-width: 767px);
+
+html {
+  & > body {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    width: 100%;
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+
+    font-family: "Muller", "Arial","sans-serif";
+    font-weight: 500;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    color: var(--color-black);
+
+    background-color: var(--color-white);
+
+    main {
+      flex-grow: 1;
+
+      & > .intro {
+        & > svg {
+          width: 200px;
+          height: 55px;
+
+          @media (--md-viewport) {
+            width: 100px;
+            height: 27px;
+          }
+        }
+      }
+    }
+
+    footer {
+      padding-left: var(--container-padding);
+      padding-right: var(--container-padding);
+    }
+  }
+}
