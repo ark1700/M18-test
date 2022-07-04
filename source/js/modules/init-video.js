@@ -17,14 +17,12 @@ const initVideo = () => {
       video.pause();
       btn.classList.remove('play');
       link.classList.remove('play');
-      console.log('play');
       return;
     }
 
     video.play();
     btn.classList.add('play');
     link.classList.add('play');
-    console.log('paused');
   });
 };
 
