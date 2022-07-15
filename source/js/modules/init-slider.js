@@ -11,7 +11,6 @@ const initSlider = () => {
   let curSlide = 2;
 
   const updateSlides = () => {
-    console.log(curSlide);
     slides.forEach((slide, indx) => {
       if (indx === curSlide) {
         slide.classList.add('active');
