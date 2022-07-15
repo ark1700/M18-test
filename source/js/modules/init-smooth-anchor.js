@@ -6,6 +6,10 @@ const initSmoothAnchor = () => {
   }
 
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    if (link.getAttribute('href') === '#' || !document.querySelector(link.getAttribute('href'))) {
+      return;
+    }
+
     link.addEventListener('click', function (e) {
       e.preventDefault();
 
@@ -13,7 +17,7 @@ const initSmoothAnchor = () => {
         behavior: 'smooth',
       });
     });
-});
+  });
 };
 
 export {initSmoothAnchor};
